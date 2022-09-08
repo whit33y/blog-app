@@ -1,7 +1,12 @@
 function Header() {
     return (
-        <header>
-            HEADER
+        <header className="flex">
+            <div>
+                BLOG APP
+            </div>
+            <div>
+                BLAH BLAH
+            </div>
         </header>
     );
 }

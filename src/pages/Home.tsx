@@ -1,4 +1,3 @@
-import RenderPost from "../components/RenderPost";
 import Boilerplate from "../layouts/Boilerplate";
 
 function Home() {
