@@ -1,8 +1,10 @@
+import Boilerplate from "../layouts/Boilerplate";
+
 function ItCategory() {
     return (
-        <div>
+        <Boilerplate>
             IT CATEGORY
-        </div>
+        </Boilerplate>
     );
 }
 

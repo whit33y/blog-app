@@ -1,8 +1,13 @@
+import RenderPost from "../components/RenderPost";
+import Boilerplate from "../layouts/Boilerplate";
+
 function Home() {
     return (
-        <div>
-            <h1>Hello world!</h1>
-        </div>
+        <Boilerplate>
+            <div>
+                HOME HOME HOME
+            </div>
+        </Boilerplate>
     );
 }
 

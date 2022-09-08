@@ -1,8 +1,10 @@
+import Boilerplate from "../layouts/Boilerplate";
+
 function LifestyleCategory() {
     return (
-        <div>
+        <Boilerplate>
             LIFESTYLE CATEGORY
-        </div>
+        </Boilerplate>
     );
 }
 

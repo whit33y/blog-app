@@ -1,11 +1,9 @@
-import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 
 import Home from './pages/Home';
 import About from './pages/About'
 import Contact from './pages/Contact';
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ItCategory from './pages/ItCategory';
 import TechnologyCategory from './pages/TechnologyCategory';
 import LifestyleCategory from './pages/LifestyleCategory';
@@ -22,6 +20,7 @@ function App() {
         <Route path='/tech' element={<TechnologyCategory />} />
         <Route path='/lifestyle' element={<LifestyleCategory />} />
         <Route path='/health' element={<HealthCategory />} />
+        {/* <Route path='/:id' element={<Tupokazcos}/> */}
       </Routes>
     </Router>
   );

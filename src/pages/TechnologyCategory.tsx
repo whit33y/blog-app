@@ -1,8 +1,10 @@
+import Boilerplate from "../layouts/Boilerplate";
+
 function TechnologyCategory() {
     return (
-        <div>
+        <Boilerplate>
             TECHNOLOGY CATEGORY
-        </div>
+        </Boilerplate>
     );
 }
 

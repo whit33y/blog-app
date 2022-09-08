@@ -1,8 +1,9 @@
+import Boilerplate from "../layouts/Boilerplate";
 function Contact() {
     return (
-        <div>
+        <Boilerplate>
             <h1>Contact</h1>
-        </div>
+        </Boilerplate>
     );
 }
 

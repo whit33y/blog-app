@@ -1,8 +1,10 @@
+import Boilerplate from "../layouts/Boilerplate";
+
 function HealthCategory() {
     return (
-        <div>
+        <Boilerplate>
             HEALTH CATEGORY
-        </div>
+        </Boilerplate>
     );
 }
 

@@ -1,8 +1,9 @@
+import Boilerplate from "../layouts/Boilerplate";
 function About() {
     return (
-        <div>
+        <Boilerplate>
             <h1>About</h1>
-        </div>
+        </Boilerplate>
     );
 }
 
