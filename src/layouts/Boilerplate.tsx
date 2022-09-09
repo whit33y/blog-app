@@ -2,14 +2,16 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 type BoilerProps = {
-    children: React.ReactChild
+    children: React.ReactNode
 }
 
 function Boilerplate(props: BoilerProps) {
     return (
-        <div>
+        <div className="h-screen flex flex-col">
             <Header />
-            {props.children}
+            <div className="h-full">
+                {props.children}
+            </div>
             <Footer />
         </div>
     );

@@ -4,7 +4,7 @@ function Home() {
     return (
         <Boilerplate>
             <div>
-                HOME HOME HOME
+                <p className="text-3xl">Home</p>
             </div>
         </Boilerplate>
     );

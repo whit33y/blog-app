@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer>
+        <footer className="flex justify-end h-1/6">
             FOOTER
         </footer>
     );
