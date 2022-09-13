@@ -2,8 +2,8 @@ import Boilerplate from "../layouts/Boilerplate";
 
 function HealthCategory() {
     return (
-        <Boilerplate>
-            HEALTH CATEGORY
+        <Boilerplate name={'Health'}>
+
         </Boilerplate>
     );
 }
