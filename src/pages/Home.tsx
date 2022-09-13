@@ -6,9 +6,6 @@ function Home() {
         <Boilerplate name={'Home'}>
             <div>
                 <RenderPost />
-                <RenderPost />
-                <RenderPost />
-                <RenderPost />
             </div>
         </Boilerplate>
     );
