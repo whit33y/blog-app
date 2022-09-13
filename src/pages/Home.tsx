@@ -1,11 +1,11 @@
 import Boilerplate from "../layouts/Boilerplate";
-import RenderPost from "../components/RenderPost";
+import RenderPostHome from "../components/RenderPostHome";
 
 function Home() {
     return (
         <Boilerplate name={'Home'}>
             <div>
-                <RenderPost />
+                <RenderPostHome />
             </div>
         </Boilerplate>
     );
