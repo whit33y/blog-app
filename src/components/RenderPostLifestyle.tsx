@@ -18,13 +18,17 @@ function RenderPostLifestyle() {
             <div>
                 {
                     post.map((postData: any) => (
-                        postData.category == 'lifestyle' ? <div>
-                            <img className="h-48 w-96" src={postData.image} />
-                            <p className="text-3xl">{postData.title}</p>
-                            <p className="text-lg">{postData.description}</p>
-                            <p className="text-sm">{postData.category}</p>
-                            <p className="text-xs">{postData.created_in}</p>
-                        </div> : <div></div>
+                        postData.category === 'lifestyle' ?
+                            <div className="flex flex-row mx-20">
+                                <img className="h-48 w-96 mr-5" src={postData.image} />
+                                <div className="text-left">
+                                    <h1 className="text-xl">{postData.title}</h1>
+                                    <p className="text-md">{postData.description}</p>
+                                    <div className='text-right'>
+                                        <p className="text-xs">{postData.created_in}</p>
+                                    </div>
+                                </div>
+                            </div> : <div></div>
                     ))
                 }
             </div>

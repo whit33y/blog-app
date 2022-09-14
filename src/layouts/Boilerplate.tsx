@@ -10,7 +10,7 @@ function Boilerplate(props: BoilerProps) {
     return (
         <div className="h-screen flex flex-col">
             <Header />
-            <p className="text-3xl text-center">{props.name}</p>
+            <h1 className="text-3xl text-center">{props.name}</h1>
             {props.children}
             <Footer />
         </div>
