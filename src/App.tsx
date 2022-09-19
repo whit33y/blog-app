@@ -8,6 +8,7 @@ import ItCategory from './pages/ItCategory';
 import TechnologyCategory from './pages/TechnologyCategory';
 import LifestyleCategory from './pages/LifestyleCategory';
 import HealthCategory from './pages/HealthCategory';
+import AddPost from './pages/AddPost';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/tech' element={<TechnologyCategory />} />
         <Route path='/lifestyle' element={<LifestyleCategory />} />
         <Route path='/health' element={<HealthCategory />} />
+        <Route path='/add' element={<AddPost />} />
         {/* <Route path='/:id' element={<Tupokazcos}/> */}
       </Routes>
     </Router>

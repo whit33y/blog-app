@@ -19,7 +19,7 @@ function RenderPostIt() {
                 {
                     post.map((postData: any) => (
                         postData.category === 'it' ?
-                            <div className="flex flex-row mx-20">
+                            <div className="flex flex-row mx-40">
                                 <img className="h-48 w-96 mr-5" src={postData.image} />
                                 <div className="text-left">
                                     <h1 className="text-xl">{postData.title}</h1>

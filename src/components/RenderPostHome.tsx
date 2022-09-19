@@ -14,7 +14,7 @@ function RenderPostHome() {
         console.log('data: ', data)
     }
     return (
-        <div className="flex flex-row mx-20">
+        <div className="flex flex-row mx-40 p-2 border-l-2 border-r-2 pr-1  border-slate-400">
             <div>
                 {
                     post.map((postData: any) => (
@@ -25,7 +25,7 @@ function RenderPostHome() {
                                 <p className="text-md">{postData.description}</p>
                                 <div className='text-right'>
                                     <h1 className="text-sm">{postData.category.toUpperCase()}</h1>
-                                    <p className="text-xs">{postData.created_in}</p>
+                                    <p className="text-xs">Created in {postData.created_in}</p>
                                 </div>
                             </div>
                         </div>
