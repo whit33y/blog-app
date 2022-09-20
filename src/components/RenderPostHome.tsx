@@ -25,7 +25,6 @@ function RenderPostHome() {
                                 <p className="text-md">{postData.description}</p>
                                 <div className='text-right'>
                                     <h1 className="text-sm">{postData.category.toUpperCase()}</h1>
-                                    <p className="text-xs">Created in {postData.created_in}</p>
                                 </div>
                             </div>
                         </div>

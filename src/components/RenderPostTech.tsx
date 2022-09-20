@@ -25,7 +25,6 @@ function RenderPostTech() {
                                     <h1 className="text-xl">{postData.title}</h1>
                                     <p className="text-md">{postData.description}</p>
                                     <div className='text-right'>
-                                        <p className="text-xs">{postData.created_in}</p>
                                     </div>
                                 </div>
                             </div> : <div></div>
