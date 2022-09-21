@@ -18,13 +18,13 @@ function RenderPostHome() {
             <div>
                 {
                     post.map((postData: any) => (
-                        <div className="flex flex-row">
-                            <img className="h-48 w-96 mr-5" src={postData.image} />
+                        <div className="flex flex-row border-b-2 mb-10 mx-10">
+                            <img className="h-40 w-60 mr-5 border-2 border-black" src={postData.image} />
                             <div className="text-left">
-                                <h1 className="text-xl">{postData.title}</h1>
+                                <h1 className="text-xl hover:underline hover:cursor-pointer">{postData.title}</h1>
                                 <p className="text-md">{postData.description}</p>
                                 <div className='text-right'>
-                                    <h1 className="text-sm">{postData.category.toUpperCase()}</h1>
+                                    <a href={postData.category}>{postData.category}</a>
                                 </div>
                             </div>
                         </div>

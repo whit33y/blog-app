@@ -14,15 +14,15 @@ function RenderPostTech() {
         console.log('data: ', data)
     }
     return (
-        <div className="flex flex-row ">
+        <div className="flex flex-row mx-40 p-2 border-l-2 border-r-2 pr-1  border-slate-400">
             <div>
                 {
                     post.map((postData: any) => (
                         postData.category === 'tech' ?
-                            <div className="flex flex-row mx-40">
-                                <img className="h-48 w-96 mr-5" src={postData.image} />
+                            <div className="flex flex-row border-b-2 mb-10 mx-10">
+                                <img className="h-48 w-96 mr-5 border-2 border-black" src={postData.image} />
                                 <div className="text-left">
-                                    <h1 className="text-xl">{postData.title}</h1>
+                                    <h1 className="text-xl hover:underline hover:cursor-pointer">{postData.title}</h1>
                                     <p className="text-md">{postData.description}</p>
                                     <div className='text-right'>
                                     </div>
