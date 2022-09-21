@@ -23,7 +23,7 @@ function RenderPostHealth() {
                                 <img className="h-48 w-96 mr-5 border-2 border-black" src={postData.image} />
                                 <div className="text-left">
                                     <h1 className="text-xl hover:underline hover:cursor-pointer">{postData.title}</h1>
-                                    <p className="text-md ">{postData.description}</p>
+                                    <p className="text-md line-clamp-3">{postData.description}</p>
                                     <div className='text-right'>
                                     </div>
                                 </div>
