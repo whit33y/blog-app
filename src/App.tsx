@@ -9,7 +9,7 @@ import TechnologyCategory from './pages/TechnologyCategory';
 import LifestyleCategory from './pages/LifestyleCategory';
 import HealthCategory from './pages/HealthCategory';
 import AddPost from './pages/AddPost';
-import PostDetails from './components/PostDetails';
+import PostDetails from './pages/PostDetails';
 
 function App() {
   return (

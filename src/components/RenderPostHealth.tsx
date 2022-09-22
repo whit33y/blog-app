@@ -23,7 +23,7 @@ function RenderPostHealth() {
                             <div className="flex flex-row border-b-2 mb-10 mx-10">
                                 <img className="h-48 w-96 mr-5 border-2 border-black" src={postData.image} />
                                 <div className="text-left">
-                                    <Link to={`/post/${postData.id}`} className="text-xl hover:underline hover:cursor-pointer">{postData.title} id: {postData.id}</Link>
+                                    <Link to={`/post/${postData.id}`} className="text-xl hover:underline hover:cursor-pointer">{postData.title}</Link>
                                     <p className="text-lg line-clamp-6">{postData.description}</p>
                                     <div className='text-right'>
                                     </div>
