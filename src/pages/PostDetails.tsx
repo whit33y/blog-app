@@ -1,32 +1,14 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '../client';
-import { useParams } from "react-router-dom";
+import Boilerplate from "../layouts/Boilerplate";
+import RenderPostDetails from "../components/RenderPostDetails";
 
-function PostDetails() {
-    const [post, setPost] = useState<any>([])
-    const { id } = useParams();
-    useEffect(() => {
-        fetchPosts()
-    }, [])
-    async function fetchPosts() {
-        const { data } = await supabase
-            .from('posts')
-            .select()
-            .eq('id', id)
-        setPost(data)
-        console.log('data: ', data)
-    }
+function Home() {
     return (
-        <div>
-            {
-                post.map((postData: any) => (
-                    <div>
-                        {postData.title}
-                    </div>
-                ))
-            }
-        </div>
+        <Boilerplate name={'More details...'}>
+            <div>
+                <RenderPostDetails />
+            </div>
+        </Boilerplate>
     );
 }
 
-export default PostDetails;
+export default Home;
