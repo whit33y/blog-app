@@ -1,23 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { supabase } from "../client";
 import Boilerplate from "../layouts/Boilerplate";
 
 
 function AddPost() {
-    const [posts, setPosts] = useState<any>([])
     const [post, setPost] = useState({ title: '', description: '', image: '', category: '' })
     const [isAdded, setIsAdded] = useState(false)
     const { title, description, image, category } = post
-    useEffect(() => {
-        fetchPosts()
-    }, [])
-    async function fetchPosts() {
-        const { data } = await supabase
-            .from('posts')
-            .select()
-        setPosts(data)
-        console.log('data: ', data)
-    }
+
     async function createPost() {
         await supabase
             .from('posts')
@@ -25,7 +15,6 @@ function AddPost() {
             .single()
         setPost({ title: '', description: '', image: '', category: '' })
         setIsAdded(true)
-        fetchPosts()
     }
     return (
         <Boilerplate name={'Add post'}>

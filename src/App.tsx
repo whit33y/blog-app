@@ -9,6 +9,7 @@ import TechnologyCategory from './pages/TechnologyCategory';
 import LifestyleCategory from './pages/LifestyleCategory';
 import HealthCategory from './pages/HealthCategory';
 import AddPost from './pages/AddPost';
+import PostDetails from './components/PostDetails';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path='/lifestyle' element={<LifestyleCategory />} />
         <Route path='/health' element={<HealthCategory />} />
         <Route path='/add' element={<AddPost />} />
-        {/* <Route path='/:id' element={<Tupokazcos}/> */}
+        <Route path='/post/:id' element={<PostDetails />} />
       </Routes>
     </Router>
   );

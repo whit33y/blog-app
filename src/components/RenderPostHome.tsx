@@ -1,5 +1,6 @@
 import { supabase } from "../client";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 function RenderPostHome() {
     const [post, setPost] = useState<any>([])
@@ -21,8 +22,8 @@ function RenderPostHome() {
                         <div className="flex flex-row border-b-2 mb-10 mx-10">
                             <img className="h-40 w-60 mr-5 border-2 border-black" src={postData.image} />
                             <div className="text-left">
-                                <h1 className="text-xl hover:underline hover:cursor-pointer">{postData.title}</h1>
-                                <p className="text-md line-clamp-3">{postData.description}</p>
+                                <Link to={`/post/${postData.id}`} className="text-xl hover:underline hover:cursor-pointer">{postData.title} id: {postData.id}</Link>
+                                <p className="text-lg line-clamp-3">{postData.description}</p>
                                 <div className='text-right'>
                                     <a href={postData.category}>{postData.category}</a>
                                 </div>
