@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../client';
 import { useParams } from "react-router-dom";
-import Boilerplate from '../layouts/Boilerplate';
 
 function RenderPostDetails() {
     const [post, setPost] = useState<any>([])
@@ -18,14 +17,15 @@ function RenderPostDetails() {
         console.log('data: ', data)
     }
     return (
-        <div>
+        <div className='bg-slate-200'>
             {
                 post.map((postData: any) => (
-                    <div className='flex flex-row mx-40 p-2  border-slate-400'>
-                        <img className='h-48 w-96' src={postData.image} />
+                    <div className='flex flex-col mx-60 p-2  border-slate-400 bg-slate-200	'>
+                        <img className='object-scale-down h-72 w-auto bg-slate-200' src={postData.image} />
                         <div>
-                            <h1 className='text-2xl'>{postData.title}</h1>
-                            <p className='text-lg'>{postData.description}</p>
+                            <h1 className='text-3xl mb-2'>{postData.title}  <span className="text-lg text-neutral-800">{postData.category}</span></h1>
+                            <p className='text-lg text-center'>{postData.description}</p>
+                            <a href='../' className="border-2 border-black mb-3 px-2 bg-emerald-400" >Back</a>
                         </div>
                     </div>
                 ))

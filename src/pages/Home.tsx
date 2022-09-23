@@ -4,9 +4,7 @@ import RenderPostHome from "../components/RenderPostHome";
 function Home() {
     return (
         <Boilerplate name={'Home'}>
-            <div>
-                <RenderPostHome />
-            </div>
+            <RenderPostHome />
         </Boilerplate>
     );
 }
