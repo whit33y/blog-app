@@ -23,8 +23,8 @@ function RenderPostTech() {
                             <div className="flex flex-row border-b-2 mb-10 mx-10">
                                 <img className="h-48 w-96 mr-5" src={postData.image} />
                                 <div className="text-left">
-                                    <Link to={`/post/${postData.id}`} className="text-xl hover:underline hover:cursor-pointer">{postData.title}  <span className="text-sm text-neutral-800  ">click to read more</span></Link>
-                                    <p className="text-lg line-clamp-6">{postData.description}</p>
+                                    <Link to={`/post/${postData.id}`} className="text-2xl hover:underline hover:cursor-pointer">{postData.title}  <span className="text-sm text-neutral-800  ">click to read more</span></Link>
+                                    <p className="text-lg tracking-widest font-medium line-clamp-6">{postData.description}</p>
                                     <div className='text-right'>
                                     </div>
                                 </div>
