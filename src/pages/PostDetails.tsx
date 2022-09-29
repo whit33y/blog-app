@@ -1,9 +1,9 @@
 import Boilerplate from "../layouts/Boilerplate";
-import RenderPostDetails from "../components/RenderPostDetails";
+import { RenderPostDetails } from "../components/RenderPostDetails";
 
 function Home() {
     return (
-        <Boilerplate name={'More details...'}>
+        <Boilerplate name={'Read more'}>
             <RenderPostDetails />
         </Boilerplate>
     );

@@ -10,9 +10,9 @@ function Footer() {
                 <button className="border-2 border-black mb-3 ml-3 px-2 bg-emerald-400" onClick={handleClick}>Newsletter</button>
             </div>
             <div className="flex">
-                <a href='#'><img className='w-4 h-4 mx-1' src='https://cdn-icons-png.flaticon.com/512/49/49354.png?w=996&t=st=1662729637~exp=1662730237~hmac=528b95b08854ad6d257ffb09c762aaa33b50127daf692c2fcf09734756010df4' /></a>
-                <a href='#'><img className='w-4 h-4 mx-1' src='https://cdn-icons-png.flaticon.com/512/49/49354.png?w=996&t=st=1662729637~exp=1662730237~hmac=528b95b08854ad6d257ffb09c762aaa33b50127daf692c2fcf09734756010df4' /></a>
-                <a href='#'><img className='w-4 h-4 mx-1' src='https://cdn-icons-png.flaticon.com/512/49/49354.png?w=996&t=st=1662729637~exp=1662730237~hmac=528b95b08854ad6d257ffb09c762aaa33b50127daf692c2fcf09734756010df4' /></a>
+                <a href='https://www.facebook.com'><img className='w-6 h-6 mx-1' src='https://cdn-icons-png.flaticon.com/512/4494/4494464.png' /></a>
+                <a href='https://www.instagram.com'><img className='w-6 h-6 mx-1' src='https://cdn-icons-png.flaticon.com/512/1384/1384015.png' /></a>
+                <a href='https://www.twitter.com'><img className='w-6 h-6 mx-1' src='https://cdn-icons-png.flaticon.com/512/733/733635.png' /></a>
             </div>
         </footer>
     );
