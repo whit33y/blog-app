@@ -1,19 +1,10 @@
 import { supabase } from "../client";
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-
+import { useGetAllPosts } from "../hooks/useGetAllPosts";
 function RenderPostHome() {
-    const [post, setPost] = useState<any>([])
-    useEffect(() => {
-        fetchPosts()
-    }, [])
-    async function fetchPosts() {
-        const { data } = await supabase
-            .from('posts')
-            .select()
-        setPost(data)
-        console.log('data: ', data)
-    }
+    const post = useGetAllPosts()
+    if (!post) return <div className="flex flex-row mx-40 p-2 border-l-2 border-r-2 pr-1  border-slate-400"><h1 className="text-3xl">Loading</h1></div>
     return (
         <div className="flex flex-row mx-40 p-2 border-l-2 border-r-2 pr-1  border-black">
             <div>

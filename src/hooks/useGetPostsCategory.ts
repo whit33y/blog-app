@@ -8,10 +8,8 @@ interface Post {
     description: string;
 }
 
-type PostType = Post[];
-
-function useGetPosts(category:string|undefined) {
-    const [post, setPost] = useState<PostType | null>(null)
+function useGetPostsCategory(category:string|undefined) {
+    const [post, setPost] = useState<Post[] | null>(null)
     useEffect(() => {
     if (!category) return
     fetchPost(category)
@@ -27,4 +25,4 @@ async function fetchPost(category: string) {
     return (post);
 }
 
-export  {useGetPosts};
+export  {useGetPostsCategory};
