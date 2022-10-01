@@ -13,7 +13,7 @@ function useGetPostsCategory(category:string|undefined) {
     useEffect(() => {
     if (!category) return
     fetchPost(category)
-}, [])
+}, [category])
 async function fetchPost(category: string) {
     const { data } = await supabase
         .from<Post>('posts')

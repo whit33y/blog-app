@@ -10,12 +10,14 @@ import LifestyleCategory from './pages/LifestyleCategory';
 import HealthCategory from './pages/HealthCategory';
 import AddPost from './pages/AddPost';
 import PostDetails from './pages/PostDetails';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/*' element={<NotFound />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/it' element={<ItCategory />} />

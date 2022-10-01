@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '../client';
 import { useParams } from "react-router-dom";
 import { useGetPost } from '../hooks/useGetPost';
 
@@ -7,10 +5,9 @@ function RenderPostDetails() {
     const { id } = useParams();
     console.log(id)
     const post = useGetPost(id)
-    if (!post) return <div>nothing</div>;
+    if (!post) return <div className="flex flex-row mx-40 p-2 border-l-2 border-r-2 pr-1  border-slate-400"><h1 className="text-3xl">Nothing found</h1></div>
     return (
         <div className='bg-slate-200 '>
-
             <div className='flex flex-col mx-60 p-2  border-slate-400 bg-slate-200	'>
                 <img className='object-scale-down h-80 w-auto bg-slate-200' src={post.image} />
                 <div className='ml-20 mr-20'>
