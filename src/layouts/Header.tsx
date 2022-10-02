@@ -1,24 +1,27 @@
 function Header() {
     return (
-        <header className="flex justify-between h-1/6 bg-emerald-400 border-2 border-black">
-            <div className="flex-auto w-2/5 text-center">
-                <h1 className="text-5xl">Blog<br />-app</h1>
-            </div>
-            <div className="flex-auto w-3/5">
-                <nav className="mb-8 flex justify-center">
-                    <a href='/' className="hover:underline m-1 text-lg">Home</a>
-                    <a href='/about' className="hover:underline m-1 text-lg">About</a>
-                    <a href='/contact' className="hover:underline m-1 text-lg">Contact</a>
-                </nav>
-                <nav className="flex justify-center">
-                    <a href='/it' className="hover:underline m-1 text-lg">IT</a>
-                    <a href='/tech' className="hover:underline m-1 text-lg">Technology</a>
-                    <a href='/lifestyle' className="hover:underline m-1 text-lg">Lifestyle</a>
-                    <a href='/health' className="hover:underline m-1 text-lg">Health</a>
-                </nav>
+        <header>
+            <div className='flex flex-row justify-around border-b-2 border-emerald-500 mx-60'>
+                <div>
+                    <a href='/' className="text-4xl">Blog-app</a>
+                </div>
+                <div className="flex flex-col">
+                    <div>
+                        <a href='/' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Home</a>
+                        <a href='/about' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">About</a>
+                        <a href='/contact' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Contact</a>
+                    </div>
+                    <div>
+                        <a href='/it' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">IT</a>
+                        <a href='/tech' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Tech</a>
+                        <a href='/health' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Health</a>
+                        <a href='/lifestyle' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Lifestyle</a>
+                    </div>
+                </div>
             </div>
         </header>
+
     );
 }
 
-export default Header;
+export { Header };

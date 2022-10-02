@@ -5,9 +5,9 @@ function Footer() {
         console.log('newsletter')
     }
     return (
-        <footer className="flex justify-between items-end h-1/6 mb-1 bg-slate-200">
+        <footer className="flex justify-between items-end h-1/6 my-6 border-t-2 bg-slate-200 mx-60">
             <div>
-                <button className="border-2 border-black mb-3 ml-3 px-2 bg-emerald-400" onClick={handleClick}>Newsletter</button>
+                <button className="border-2 border-black px-2 bg-emerald-400 hover:text-emerald-400 hover:bg-black duration-300" onClick={handleClick}>Newsletter</button>
             </div>
             <div className="flex">
                 <a href='https://www.facebook.com'><img className='w-6 h-6 mx-1' src='https://cdn-icons-png.flaticon.com/512/4494/4494464.png' /></a>
@@ -18,4 +18,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export { Footer };
