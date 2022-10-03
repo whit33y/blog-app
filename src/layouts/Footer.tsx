@@ -5,7 +5,7 @@ function Footer() {
         console.log('newsletter')
     }
     return (
-        <footer className="flex justify-between items-end h-1/6 border-t-2 bg-slate-200">
+        <footer className="flex justify-between items-end h-1/6 border-t-2 bg-slate-200 mt-auto ">
             <div>
                 <button className="border-2 border-black px-2 bg-emerald-400 hover:text-emerald-400 hover:bg-black duration-300" onClick={handleClick}>Newsletter</button>
             </div>
