@@ -10,7 +10,7 @@ function Header() {
         <header>
             <div className='flex flex-row justify-around border-b-2 border-emerald-500'>
                 <div>
-                    <a href='/' className="lg:text-4xl md:text-2xl sm:text-xl">Blog-app</a>
+                    <a href='/' className={isNavOpen ? 'hidden' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</a>
                 </div>
                 <div className="hidden md:block">
                     <div className="flex flex-col">
@@ -25,6 +25,17 @@ function Header() {
                             <a href='/health' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Health</a>
                             <a href='/lifestyle' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Lifestyle</a>
                         </div>
+                    </div>
+                </div>
+                <div className={isNavOpen ? 'block' : 'hidden'}>
+                    <div className="flex flex-col justify-center">
+                        <a href='/'>Home</a>
+                        <a href='/about'>About</a>
+                        <a href='/contact'>Contact</a>
+                        <a href='/it'>IT</a>
+                        <a href='/tech'>Tech</a>
+                        <a href='/health'>Health</a>
+                        <a href='/lifestyle'>Lifestyle</a>
                     </div>
                 </div>
                 <div className="block md:hidden" onClick={() => handleClick()}>
