@@ -10,7 +10,7 @@ function Header() {
         <header>
             <div className='flex flex-row justify-around border-b-2 border-emerald-500'>
                 <div>
-                    <a href='/' className={isNavOpen ? 'hidden' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</a>
+                    <a href='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</a>
                 </div>
                 <div className="hidden md:block">
                     <div className="flex flex-col">
@@ -27,7 +27,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-                <div className={isNavOpen ? 'block' : 'hidden'}>
+                <div className={isNavOpen ? 'block md:hidden' : 'hidden'}>
                     <div className="flex flex-col justify-center">
                         <a href='/'>Home</a>
                         <a href='/about'>About</a>
