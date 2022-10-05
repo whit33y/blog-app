@@ -34,8 +34,6 @@ function Header() {
                         </div>
                         <div className="flex flex-col">
                             <a href='/'>Home</a>
-                            <a href='/about'>About</a>
-                            <a href='/contact'>Contact</a>
                             <a href='/it'>IT</a>
                             <a href='/tech'>Tech</a>
                             <a href='/health'>Health</a>
