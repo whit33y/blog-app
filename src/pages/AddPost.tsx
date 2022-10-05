@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../client";
-import Boilerplate from "../layouts/Boilerplate";
+import { Boilerplate } from "../layouts/Boilerplate";
 
 
 function AddPost() {
@@ -58,4 +58,4 @@ function AddPost() {
     );
 }
 
-export default AddPost;
+export { AddPost };

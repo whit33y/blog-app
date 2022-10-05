@@ -24,4 +24,4 @@ function RenderPostTech() {
     );
 }
 
-export default RenderPostTech;
+export { RenderPostTech };

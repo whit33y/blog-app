@@ -1,7 +1,7 @@
-import Boilerplate from "../layouts/Boilerplate";
+import { Boilerplate } from "../layouts/Boilerplate";
 import { RenderPostDetails } from "../components/RenderPostDetails";
 
-function Home() {
+function PostDetails() {
     return (
         <Boilerplate name={'Read more'}>
             <RenderPostDetails />
@@ -9,4 +9,4 @@ function Home() {
     );
 }
 
-export default Home;
+export { PostDetails };

@@ -1,4 +1,4 @@
-import Boilerplate from "../layouts/Boilerplate";
+import { Boilerplate } from "../layouts/Boilerplate";
 
 function NotFound() {
     return (

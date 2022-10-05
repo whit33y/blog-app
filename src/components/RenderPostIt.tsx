@@ -24,4 +24,4 @@ function RenderPostIt() {
     );
 }
 
-export default RenderPostIt;
+export { RenderPostIt };

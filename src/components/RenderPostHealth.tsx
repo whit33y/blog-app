@@ -24,4 +24,4 @@ function RenderPostHealth() {
     );
 }
 
-export default RenderPostHealth;
+export { RenderPostHealth };

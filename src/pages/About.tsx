@@ -1,8 +1,8 @@
-import Boilerplate from "../layouts/Boilerplate";
+import { Boilerplate } from "../layouts/Boilerplate";
 function About() {
     return (
         <Boilerplate name={'About me and about a project'}>
-            <div className="flex flex-col items-center mt-5 sm:mx-0 md:mx-20">
+            <div className="flex flex-col items-center mt-5 sm:mx-0 md:mx-20 bg-slate-200">
                 <h1 className="text-2xl mb-5">More about me: </h1>
                 <p className="text-lg mb-5 text-justify font-medium tracking-widest">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt fuga perferendis placeat alias facere hic enim animi magni excepturi exercitationem ea, commodi, facilis labore eius. Accusamus tempora neque blanditiis in.
                     Nobis quasi laboriosam ad, doloremque vel aut nostrum laudantium praesentium placeat aliquam ex molestias vero facilis officiis vitae earum accusamus? Eaque voluptatibus nam rem quos temporibus delectus ea corrupti atque?
@@ -16,4 +16,4 @@ function About() {
     );
 }
 
-export default About;
+export { About };

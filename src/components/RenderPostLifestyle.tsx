@@ -24,4 +24,4 @@ function RenderPostLifestyle() {
     );
 }
 
-export default RenderPostLifestyle;
+export { RenderPostLifestyle };

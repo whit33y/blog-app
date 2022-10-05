@@ -17,4 +17,4 @@ function Boilerplate(props: BoilerProps) {
     );
 }
 
-export default Boilerplate;
+export { Boilerplate };

@@ -1,5 +1,5 @@
-import RenderPostTech from "../components/RenderPostTech";
-import Boilerplate from "../layouts/Boilerplate";
+import { RenderPostTech } from "../components/RenderPostTech";
+import { Boilerplate } from "../layouts/Boilerplate";
 
 function TechnologyCategory() {
     return (
@@ -9,4 +9,4 @@ function TechnologyCategory() {
     );
 }
 
-export default TechnologyCategory;
+export { TechnologyCategory };

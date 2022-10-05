@@ -1,5 +1,5 @@
-import RenderPostIt from "../components/RenderPostIt";
-import Boilerplate from "../layouts/Boilerplate";
+import { RenderPostIt } from "../components/RenderPostIt";
+import { Boilerplate } from "../layouts/Boilerplate";
 
 function ItCategory() {
     return (
@@ -9,4 +9,4 @@ function ItCategory() {
     );
 }
 
-export default ItCategory;
+export { ItCategory };

@@ -1,5 +1,5 @@
-import Boilerplate from "../layouts/Boilerplate";
-import RenderPostHealth from "../components/RenderPostHealth";
+import { Boilerplate } from "../layouts/Boilerplate";
+import { RenderPostHealth } from "../components/RenderPostHealth";
 
 function HealthCategory() {
     return (
@@ -9,4 +9,4 @@ function HealthCategory() {
     );
 }
 
-export default HealthCategory;
+export { HealthCategory };

@@ -1,5 +1,5 @@
-import RenderPostLifestyle from "../components/RenderPostLifestyle";
-import Boilerplate from "../layouts/Boilerplate";
+import { RenderPostLifestyle } from "../components/RenderPostLifestyle";
+import { Boilerplate } from "../layouts/Boilerplate";
 
 function LifestyleCategory() {
     return (
@@ -9,4 +9,4 @@ function LifestyleCategory() {
     );
 }
 
-export default LifestyleCategory;
+export { LifestyleCategory };

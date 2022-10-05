@@ -26,4 +26,4 @@ function RenderPostHome() {
     );
 }
 
-export default RenderPostHome;
+export { RenderPostHome };
