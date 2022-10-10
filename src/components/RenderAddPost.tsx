@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { supabase } from "../client";
+import { useNavigate } from 'react-router';
+import { useAuth } from '../context/Auth';
+
 function RenderAddPost() {
-    const [post, setPost] = useState({ title: '', description: '', image: '', category: '' })
-    const [isAdded, setIsAdded] = useState(false)
-    const { title, description, image, category } = post
+    const [post, setPost] = useState({ title: '', description: '', image: '', category: '' });
+    const [isAdded, setIsAdded] = useState(false);
+    const navigate = useNavigate();
+    const { user, signOut } = useAuth();
+
+    const { title, description, image, category } = post;
+    async function handleSignOut() {
+        await signOut()
+        navigate('/')
+    }
     async function createPost() {
         await supabase
             .from('posts')
@@ -14,6 +24,11 @@ function RenderAddPost() {
     }
     return (
         <div className="flex flex-col justify-center mx-40">
+
+
+            <div>
+                <button onClick={handleSignOut}>Sign out</button>
+            </div>
             <p>Title</p>
             <input type='text' name='title' className="border-2"
                 value={title}
