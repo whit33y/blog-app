@@ -1,14 +1,14 @@
-import { useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../context/Auth'
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/Auth';
 
 function Login() {
     const emailRef = useRef<HTMLInputElement | null>(null);
     const passwordRef = useRef<HTMLInputElement | null>(null);
 
-    const { signIn } = useAuth()
+    const { signIn } = useAuth();
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     async function handleSubmit(e: any) {
         e.preventDefault()
@@ -37,6 +37,6 @@ function Login() {
                 <button type="submit">Login</button>
             </form>
         </>
-    )
+    );
 }
-export { Login }
+export { Login };

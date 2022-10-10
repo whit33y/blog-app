@@ -3,8 +3,7 @@ import { useGetPost } from '../hooks/useGetPost';
 
 function RenderPostDetails() {
     const { id } = useParams();
-    console.log(id)
-    const post = useGetPost(id)
+    const post = useGetPost(id);
     if (!post) return <div className="flex flex-row"><h1 className="text-3xl">Nothing found</h1></div>
     return (
         <div className='bg-slate-200 '>

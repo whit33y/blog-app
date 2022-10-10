@@ -55,15 +55,10 @@ function RenderAddPost() {
                 <option>lifestyle</option>
                 <option>health</option>
             </select>
-            {/* <br />
-<p>Date</p>
-<input type="date" className="border-2"
-    value={post.created_in}
-onChange={e => setPost({ ...post, created_in: e.target.value })} /> */}
             <br />
             <button className="border-2 border-black rounded-lg bg-emerald-400" onClick={createPost}> Post </button>
             {isAdded ? <p className="text-2xl text-green-500">Post added</p> : <p className="text-2xl text-red-500">Post not added</p>}
         </div>
-    )
+    );
 }
-export { RenderAddPost }
+export { RenderAddPost };

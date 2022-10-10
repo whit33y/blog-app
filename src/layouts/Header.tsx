@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 function Header() {
-    const [isNavOpen, setIsNavOpen] = useState<boolean>(false)
+    const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
-        setIsNavOpen((prev) => !prev)
-        console.log('clicked')
+        setIsNavOpen((prev) => !prev);
+        console.log('clicked');
     }
     return (
         <header>

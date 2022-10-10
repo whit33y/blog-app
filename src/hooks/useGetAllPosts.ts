@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { supabase } from "../client"
+import { useEffect, useState } from "react";
+import { supabase } from "../client";
 interface Post {
     id: number;
     title: string;

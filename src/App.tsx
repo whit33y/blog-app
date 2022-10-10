@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import { Home } from './pages/Home';
 import { About } from './pages/About'
@@ -28,7 +28,7 @@ function App() {
           <Route path='/it' element={<ItCategory />} />
           <Route path='/tech' element={<TechnologyCategory />} />
           <Route path='/lifestyle' element={<LifestyleCategory />} />
-          <Route path='/loginForAdm' element={<Login />} />
+          <Route path='/accesstools' element={<Login />} />
           <Route path='/signup' element={<ProtectedRoute><Signup /></ProtectedRoute>} />
           <Route path='/health' element={<HealthCategory />} />
           <Route path='/add' element={<ProtectedRoute><AddPost /></ProtectedRoute>} />
@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export { App };

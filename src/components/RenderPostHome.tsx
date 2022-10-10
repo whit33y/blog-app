@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useGetAllPosts } from "../hooks/useGetAllPosts";
 
 function RenderPostHome() {
-    const post = useGetAllPosts()
+    const post = useGetAllPosts();
     if (!post) return <div className="flex flex-row"><h1 className="text-3xl">Loading</h1></div>
     return (
         <div className="flex flex-row">

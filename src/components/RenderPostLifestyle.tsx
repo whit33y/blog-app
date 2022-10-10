@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useGetPostsCategory } from "../hooks/useGetPostsCategory";
 
 function RenderPostLifestyle() {
-    const post = useGetPostsCategory('lifestyle')
+    const post = useGetPostsCategory('lifestyle');
     if (!post) return <div className="flex flex-row"><h1 className="text-3xl">Loading</h1></div>
     return (
         <div className="flex flex-row">
