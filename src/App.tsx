@@ -31,7 +31,7 @@ function App() {
           <Route path='/loginForAdm' element={<Login />} />
           <Route path='/signup' element={<ProtectedRoute><Signup /></ProtectedRoute>} />
           <Route path='/health' element={<HealthCategory />} />
-          <Route path='/add' element={<AddPost />} />
+          <Route path='/add' element={<ProtectedRoute><AddPost /></ProtectedRoute>} />
           <Route path='/post/:id' element={<PostDetails />} />
         </Routes>
       </AuthProvider>
