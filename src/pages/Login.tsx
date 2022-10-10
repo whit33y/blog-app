@@ -1,19 +1,20 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/Auth'
 
 function Login() {
-    const emailRef = useRef()
-    const passwordRef = useRef()
+    const emailRef = useRef<HTMLInputElement | null>(null);
+    const passwordRef = useRef<HTMLInputElement | null>(null);
 
     const { signIn } = useAuth()
 
     const navigate = useNavigate()
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e: any) {
         e.preventDefault()
-        const email = emailRef.current.value
-        const password = passwordRef.current.value
+
+        const email = emailRef.current?.value
+        const password = passwordRef.current?.value
         const { error } = await signIn({ email, password })
         if (error) {
             alert('error signing in')

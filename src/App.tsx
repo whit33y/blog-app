@@ -14,6 +14,7 @@ import { NotFound } from './pages/NotFound';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { AuthProvider } from './context/Auth';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -27,8 +28,8 @@ function App() {
           <Route path='/it' element={<ItCategory />} />
           <Route path='/tech' element={<TechnologyCategory />} />
           <Route path='/lifestyle' element={<LifestyleCategory />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route path='/loginForAdm' element={<Login />} />
+          <Route path='/signup' element={<ProtectedRoute><Signup /></ProtectedRoute>} />
           <Route path='/health' element={<HealthCategory />} />
           <Route path='/add' element={<AddPost />} />
           <Route path='/post/:id' element={<PostDetails />} />

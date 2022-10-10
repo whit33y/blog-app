@@ -20,7 +20,6 @@ type AuthPromises = {
 interface ContextValue {
     signUp: (data: UserCredentials) => Promise<AuthPromises>;
     signIn: (data: UserCredentials) => Promise<AuthPromises>;
-    signInWithTwitter: () => Promise<AuthPromises>;
     signOut: () => Promise<{ error: ApiError | null }>;
     user: User | null;
 }
