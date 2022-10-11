@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router';
 import { useAuth } from '../context/Auth';
 
 function RenderAddPost() {
-    const [post, setPost] = useState({ title: '', description: '', image: '', category: '' });
+    const [post, setPost] = useState({ title: '', description: '', image: '', category: 'it' });
     const [isAdded, setIsAdded] = useState(false);
     const navigate = useNavigate();
-    const { user, signOut } = useAuth();
+    const { signOut } = useAuth();
 
     const { title, description, image, category } = post;
     async function handleSignOut() {
@@ -24,32 +24,30 @@ function RenderAddPost() {
     }
     return (
         <div className="flex flex-col justify-center mx-40">
-
-
             <div>
                 <button onClick={handleSignOut}>Sign out</button>
             </div>
-            <p>Title</p>
+            <label htmlFor='title'>Title</label>
             <input type='text' name='title' className="border-2"
                 value={title}
                 onChange={e => setPost({ ...post, title: e.target.value })} />
+
             <br />
-            <p>Image</p>
+            <label htmlFor='image'>Image</label>
             <input type='text' name='image' className="border-2"
                 value={image}
                 onChange={e => setPost({ ...post, image: e.target.value })} />
             <br />
-            <p>Text content</p>
+            <label htmlFor='textCont'>Text content</label>
             <textarea name='textCont' rows={3} className="border-2"
                 value={description}
                 onChange={e => setPost({ ...post, description: e.target.value })}
             />
             <br />
-            <p>Category</p>
+            <label htmlFor='category'>Category</label>
             <select className="border-2"
                 value={category}
                 onChange={e => setPost({ ...post, category: e.target.value })}>
-                <option >dont select it!!</option>
                 <option>it</option>
                 <option>tech</option>
                 <option>lifestyle</option>
