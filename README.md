@@ -60,5 +60,5 @@ npm start
 </ul>
 
 ## Report issues 🚩
-<a href="https://github.com/whit33y/blog-app/issues">Report issues</a>__
-Blog-app is an open source project, report issues, bugs, make contributions of any kind.
+<a href="https://github.com/whit33y/blog-app/issues">Report issues</a>
+<p>Blog-app is an open source project, report issues, bugs, make contributions of any kind.</p>
