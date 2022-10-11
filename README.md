@@ -58,6 +58,7 @@ npm start
 <li><a href="https://tailwindcss.com/">Tailwind</a></li>
 <li><a href="https://prettier.io/">Prettier</a></li>
 </ul>
+
 ## Report issues 🚩
-<a href="https://github.com/whit33y/blog-app/issues">Report issues</a>
+<a href="https://github.com/whit33y/blog-app/issues">Report issues</a>__
 Blog-app is an open source project, report issues, bugs, make contributions of any kind.
