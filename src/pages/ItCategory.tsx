@@ -1,10 +1,10 @@
-import { RenderPostIt } from "../components/RenderPostIt";
 import { Boilerplate } from "../layouts/Boilerplate";
+import { RenderPostCategory } from "../components/RenderPostCategory";
 
 function ItCategory() {
     return (
         <Boilerplate name={'IT'}>
-            <RenderPostIt />
+            <RenderPostCategory category={'it'} />
         </Boilerplate>
     );
 }

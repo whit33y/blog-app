@@ -1,10 +1,10 @@
 import { Boilerplate } from "../layouts/Boilerplate";
-import { RenderPostHealth } from "../components/RenderPostHealth";
+import { RenderPostCategory } from "../components/RenderPostCategory";
 
 function HealthCategory() {
     return (
         <Boilerplate name={'Health'}>
-            <RenderPostHealth />
+            <RenderPostCategory category={'health'} />
         </Boilerplate>
     );
 }

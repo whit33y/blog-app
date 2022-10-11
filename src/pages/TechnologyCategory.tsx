@@ -1,10 +1,10 @@
-import { RenderPostTech } from "../components/RenderPostTech";
 import { Boilerplate } from "../layouts/Boilerplate";
+import { RenderPostCategory } from "../components/RenderPostCategory";
 
 function TechnologyCategory() {
     return (
         <Boilerplate name={'Technology'}>
-            <RenderPostTech />
+            <RenderPostCategory category={'tech'} />
         </Boilerplate>
     );
 }
