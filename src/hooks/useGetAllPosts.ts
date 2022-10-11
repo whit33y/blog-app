@@ -18,7 +18,6 @@ async function fetchPost() {
         .from<Post>('posts')
         .select()
     setPost(data)
-    console.log('data: ', data)
 }
     return (post);
 }

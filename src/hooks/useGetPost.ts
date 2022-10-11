@@ -19,7 +19,6 @@ async function fetchPost(id: string) {
         .select()
         .eq('id', id!).single()
     setPost(data)
-    console.log('data: ', data)
 }
     return (post);
 }

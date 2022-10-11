@@ -4,7 +4,6 @@ function Header() {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
         setIsNavOpen((prev) => !prev);
-        console.log('clicked');
     }
     return (
         <header>

@@ -20,7 +20,6 @@ async function fetchPost(category: string) {
         .select()
         .eq('category', category!)
     setPost(data)
-    console.log('data: ', data)
 }
     return (post);
 }
