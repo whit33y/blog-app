@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../client";
-interface Post {
-    id: number;
-    title: string;
-    category: string;
-    image: string;
-    description: string;
-}
+import {Post} from '../types/PostTypes'
+
 
 function useGetPostsCategory(category:string|undefined) {
     const [post, setPost] = useState<Post[] | null>(null)
