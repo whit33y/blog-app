@@ -26,15 +26,13 @@ function Signup() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="input-email">Email</label>
-                <input id="input-email" type="email" ref={emailRef} />
-
-                <label htmlFor="input-password">Password</label>
-                <input id="input-password" type="password" ref={passwordRef} />
-
+                <label htmlFor="input-email" >Email</label>
+                <input id="input-email" type="email" ref={emailRef} className='border-2 border-black' />
                 <br />
-
-                <button type="submit">Sign up</button>
+                <label htmlFor="input-password">Password</label>
+                <input id="input-password" type="password" ref={passwordRef} className='border-2 border-black' />
+                <br />
+                <button type="submit" className='border-2 border-black'>Sign up</button>
             </form>
         </>
     );

@@ -27,14 +27,14 @@ function Login() {
         <>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="input-email">Email</label>
-                <input id="input-email" type="email" ref={emailRef} />
-
+                <input id="input-email" type="email" ref={emailRef} className='border-2 border-black mb-2' />
+                <br />
                 <label htmlFor="input-password">Password</label>
-                <input id="input-password" type="password" ref={passwordRef} />
+                <input id="input-password" type="password" ref={passwordRef} className='border-2 border-black' />
 
                 <br />
 
-                <button type="submit">Login</button>
+                <button type="submit" className='border-2 border-black'>Login</button>
             </form>
         </>
     );
