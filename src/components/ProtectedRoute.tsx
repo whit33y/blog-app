@@ -1,7 +1,7 @@
 import { useAuth } from "../context/Auth";
 import { Navigate } from "react-router-dom";
 interface PrivateRoute {
-    children: React.ReactNode;
+    children: JSX.Element;
 }
 
 const ProtectedRoute = ({ children }: PrivateRoute) => {
