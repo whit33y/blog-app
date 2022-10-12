@@ -8,7 +8,7 @@ function RenderPostDetails() {
     return (
         <div className='bg-slate-200 '>
             <div className='flex flex-col sm:mx-0 md:mx-20'>
-                <img className='object-scale-down h-80 w-auto bg-slate-200 ' src={post.image} alt='Post' />
+                <img className='object-scale-down h-80 w-auto bg-slate-200 ' src={post.image} alt='Post main' />
                 <div>
                     <a href='../' className="border-2 border-black px-2 bg-emerald-400 hover:text-emerald-400 hover:bg-black duration-300 sm:mb-2 sm:ml-2 md:mb-4 ">Back</a>
                     <h1 className='text-3xl'>{post.title}<span className="text-lg text-neutral-800"><br />Category: {post.category}</span></h1>
