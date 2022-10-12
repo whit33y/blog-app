@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useGetPostsCategory } from "../hooks/useGetPostsCategory";
+import { Post } from '../types/Post'
+
 type RenderProps = {
     category: string
 }
+
 function RenderPostCategory(props: RenderProps) {
     const post = useGetPostsCategory(props.category);
     if (!post) return <div className="flex flex-row"><h1 className="text-3xl">Loading</h1></div>
@@ -10,7 +13,7 @@ function RenderPostCategory(props: RenderProps) {
         <div className="flex flex-row">
             <div>
                 {
-                    post.map((postData: any) => (
+                    post.map((postData: Post) => (
                         <div className="flex flex-row border-b-2">
                             <img className="h-40 w-60 sm:ml-0 md:ml-20 mr-5 border-2 border-black" src={postData.image} />
                             <div className="text-left">

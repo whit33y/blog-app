@@ -11,7 +11,7 @@ function Signup() {
     const navigate = useNavigate();
 
 
-    async function handleSubmit(e: any) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const email = emailRef.current?.value;
         const password = passwordRef.current?.value;
