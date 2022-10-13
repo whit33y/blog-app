@@ -2,8 +2,11 @@ import { useState } from "react";
 import { supabase } from "../client";
 import { useNavigate } from 'react-router';
 import { useAuth } from '../context/Auth';
+import { useCreatePost } from "../hooks/useCreatePost";
 
 function RenderAddPost() {
+    const create = useCreatePost()
+    console.log(useCreatePost)
     const [post, setPost] = useState({ title: '', description: '', image: '', category: 'it' });
     const [isAdded, setIsAdded] = useState(false);
     const navigate = useNavigate();
