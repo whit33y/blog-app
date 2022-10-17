@@ -1,7 +1,7 @@
 import { supabase } from "../client";
 import {Post} from '../types/PostTypes'
 
-async function fetchPostCategory(category: string) {
+async function useGetPostByCategory(category: string) {
     const { data } = await supabase
         .from<Post>('posts')
         .select()
@@ -9,4 +9,4 @@ async function fetchPostCategory(category: string) {
     return data
 }
 
-export  {fetchPostCategory};
+export  {useGetPostByCategory};

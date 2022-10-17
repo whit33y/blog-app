@@ -1,21 +1,15 @@
-import { useEffect, useState } from "react";
 import { supabase } from "../client";
 import {Post} from '../types/PostTypes'
 
-function useGetPost(id:string|undefined) {
-    const [post, setPost] = useState<Post | null>(null)
-    useEffect(() => {
-    if (!id) return
-    fetchPost(id)
-}, [id])
-async function fetchPost(id: string) {
+async function useGetPostDetails(id: string|undefined) {
+    if(!id) return
+    else{
     const { data } = await supabase
         .from<Post>('posts')
         .select()
-        .eq('id', id!).single()
-    setPost(data)
+        .eq('id', id).single()
+    return data
+    }
 }
-    return (post);
-}
-
-export {useGetPost};
+    
+export {useGetPostDetails};

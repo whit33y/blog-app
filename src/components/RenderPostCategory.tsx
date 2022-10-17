@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { fetchPostCategory } from "../hooks/useGetPostsCategory";
+import { useGetPostByCategory } from "../hooks/useGetPostsCategory";
 import { Post } from '../types/PostTypes'
 import { Category } from '../types/CategoryTypes';
 import { useQuery } from 'react-query';
 function RenderPostCategory(props: Category) {
-    const query = useQuery(['postsByCategory', 'props.category'], () => fetchPostCategory(props.category))
+    const getPosts = useGetPostByCategory(props.category)
+    const query = useQuery(['postsByCategory'], () => getPosts)
     return (
         <div className="flex flex-row">
             <div>

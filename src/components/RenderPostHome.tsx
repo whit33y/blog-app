@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Post } from '../types/PostTypes'
 import { useQuery } from 'react-query';
-import { fetchPostAll } from '../hooks/useGetAllPosts';
+import { useGetAllPosts } from '../hooks/useGetAllPosts';
 function RenderPostHome() {
-    const query = useQuery(['posts'], fetchPostAll)
+    const query = useQuery(['posts'], useGetAllPosts)
     return (
         <div className="flex flex-row">
             <div>
