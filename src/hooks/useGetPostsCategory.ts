@@ -1,22 +1,12 @@
-import { useEffect, useState } from "react";
 import { supabase } from "../client";
 import {Post} from '../types/PostTypes'
 
-
-function useGetPostsCategory(category:string|undefined) {
-    const [post, setPost] = useState<Post[] | null>(null)
-    useEffect(() => {
-    if (!category) return
-    fetchPost(category)
-}, [category])
-async function fetchPost(category: string) {
+async function fetchPostCategory(category: string) {
     const { data } = await supabase
         .from<Post>('posts')
         .select()
-        .eq('category', category!)
-    setPost(data)
-}
-    return (post);
+        .eq('category', category)
+    return data
 }
 
-export  {useGetPostsCategory};
+export  {fetchPostCategory};
