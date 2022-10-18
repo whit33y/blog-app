@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function Header() {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
@@ -9,20 +9,20 @@ function Header() {
         <header>
             <div className='flex flex-row justify-around border-b-2 border-emerald-500'>
                 <div>
-                    <a href='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</a>
+                    <Link to='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</ Link>
                 </div>
                 <div className="hidden md:block">
                     <div className="flex flex-col">
                         <div>
-                            <a href='/' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Home</a>
-                            <a href='/about' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">About</a>
-                            <a href='/contact' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Contact</a>
+                            <Link to='/' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Home</ Link>
+                            <Link to='/about' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">About</ Link>
+                            <Link to='/contact' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Contact</ Link>
                         </div>
                         <div>
-                            <a href='/it' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">IT</a>
-                            <a href='/tech' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Tech</a>
-                            <a href='/health' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Health</a>
-                            <a href='/lifestyle' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Lifestyle</a>
+                            <Link to='/it' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">IT</ Link>
+                            <Link to='/tech' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Tech</ Link>
+                            <Link to='/health' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Health</ Link>
+                            <Link to='/lifestyle' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Lifestyle</ Link>
                         </div>
                     </div>
                 </div>
@@ -32,11 +32,11 @@ function Header() {
                             <h1 className="text-lg text-emerald-500">Blog-app</h1>
                         </div>
                         <div className="flex flex-col">
-                            <a href='/'>Home</a>
-                            <a href='/it'>IT</a>
-                            <a href='/tech'>Tech</a>
-                            <a href='/health'>Health</a>
-                            <a href='/lifestyle'>Lifestyle</a>
+                            <Link to='/'>Home</ Link>
+                            <Link to='/it'>IT</ Link>
+                            <Link to='/tech'>Tech</ Link>
+                            <Link to='/health'>Health</ Link>
+                            <Link to='/lifestyle'>Lifestyle</ Link>
                         </div>
                     </div>
                 </div>

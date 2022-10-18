@@ -1,18 +1,18 @@
-import { useState } from "react";
 import { supabase } from "../client";
+import { Post } from '../types/PostTypes'
 
-function useCreatePost(){
-    const [post, setPost] = useState({ title: '', description: '', image: '', category: 'it' });
-    const [isAdded, setIsAdded] = useState(false);
-    const { title, description, image, category } = post;
-        async function createPost() {
-            await supabase
-                .from('posts')
-                .insert([{ title, description, image, category }])
-                .single()
-            setPost({ title: '', description: '', image: '', category: '' })
-            setIsAdded(true)
-        }
-    return {isAdded, post}
+type PostInsert = Omit<Post, "id">
+
+export const createPost = async ({ title, description, image, category }: PostInsert) => {
+    const data = await supabase
+        .from<PostInsert>('posts')
+        .insert([{ title, description, image, category }])
+        .single()
+
+    return data
 }
-export {useCreatePost}
+
+async function useCreatePost() {
+
+}
+export { useCreatePost }
