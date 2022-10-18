@@ -1,5 +1,5 @@
 import { supabase } from "../client";
-import {Post} from '../types/PostTypes'
+import { Post } from '../types/PostTypes'
 
 async function useGetPostByCategory(category: string) {
     const { data } = await supabase
@@ -9,4 +9,4 @@ async function useGetPostByCategory(category: string) {
     return data
 }
 
-export  {useGetPostByCategory};
+export { useGetPostByCategory };

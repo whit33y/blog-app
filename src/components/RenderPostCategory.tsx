@@ -5,7 +5,7 @@ import { Category } from '../types/CategoryTypes';
 import { useQuery } from 'react-query';
 function RenderPostCategory(props: Category) {
     const getPosts = useGetPostByCategory(props.category)
-    const query = useQuery(['postsByCategory'], () => getPosts)
+    const query = useQuery(['postsByCategory', props.category], () => getPosts)
     return (
         <div className="flex flex-row">
             <div>

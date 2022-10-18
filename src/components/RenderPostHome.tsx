@@ -13,7 +13,7 @@ function RenderPostHome() {
                         <Link to={`/post/${postData.id}`} key={postData.id} className="sm:text-lg md:text-2xl hover:underline hover:cursor-pointer ">{postData.title} <span className="text-sm text-neutral-800 hidden md:block">click to read more</span></Link>
                         <p className="sm:text-md md:text-lg sm:mr-0 md:mr-20 font-medium sm: line-clamp-3 md:line-clamp-4">{postData.description}</p>
                         <div className='text-right text-lg hidden md:block sm:mr-0 md:mr-20'>
-                            <a href={postData.category}>{postData.category}</a>
+                            <Link to={postData.category}>{postData.category}</Link>
                         </div>
                     </div>
                 </div>)) : null

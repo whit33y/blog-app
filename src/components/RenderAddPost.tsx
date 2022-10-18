@@ -59,7 +59,7 @@ function RenderAddPost() {
                 <br />
                 <button className="border-2 border-black rounded-lg bg-emerald-400"> Post </button>
             </form>
-        </div>
+        </div >
     );
 }
 export { RenderAddPost };

@@ -1,5 +1,5 @@
 import { supabase } from "../client";
-import {Post} from '../types/PostTypes'
+import { Post } from '../types/PostTypes'
 
 async function useGetAllPosts() {
     const { data } = await supabase
@@ -8,4 +8,4 @@ async function useGetAllPosts() {
     return data
 }
 
-export {useGetAllPosts}
+export { useGetAllPosts }
