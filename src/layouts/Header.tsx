@@ -7,7 +7,7 @@ function Header() {
     }
     return (
         <header>
-            <div className='flex flex-row justify-around border-b-2 border-emerald-500'>
+            <div className='flex flex-row justify-around border-b-2 border-emerald-500 bg-emerald-300'>
                 <div>
                     <Link to='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</ Link>
                 </div>
@@ -29,7 +29,7 @@ function Header() {
                 <div className={isNavOpen ? 'block md:hidden' : 'hidden'}>
                     <div className="flex flex-col">
                         <div>
-                            <h1 className="text-lg text-emerald-500">Blog-app</h1>
+                            <h1 className="text-lg text-emerald-700">Blog-app</h1>
                         </div>
                         <div className="flex flex-col">
                             <Link to='/'>Home</ Link>
