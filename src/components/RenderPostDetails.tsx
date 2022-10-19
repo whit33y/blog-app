@@ -8,7 +8,7 @@ function RenderPostDetails() {
     const query = useQuery(['postDetails', id], () => getPost)
     return (
         <div className='bg-slate-200 '>
-            {query.isLoading ? 'Loading' : query.isError ? 'Error!' : query.data ? (
+            {query.isLoading ? <p className='text-2xl'>Loading ...</p> : query.isError ? <p className='text-2xl'>Error! </p> : query.data ? (
                 <div className='flex flex-col sm:mx-0 md:mx-20'>
                     <img className='object-scale-down h-80 w-auto bg-slate-200 ' src={query.data?.image} alt='Post main' />
                     <div>

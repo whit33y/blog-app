@@ -3,7 +3,7 @@ import { Post } from '../types/PostTypes'
 
 type PostInsert = Omit<Post, "id">
 
-export const createPost = async ({ title, description, image, category }: PostInsert) => {
+const createPost = async ({ title, description, image, category }: PostInsert) => {
     const data = await supabase
         .from<PostInsert>('posts')
         .insert([{ title, description, image, category }])
@@ -12,7 +12,4 @@ export const createPost = async ({ title, description, image, category }: PostIn
     return data
 }
 
-async function useCreatePost() {
-
-}
-export { useCreatePost }
+export { createPost }

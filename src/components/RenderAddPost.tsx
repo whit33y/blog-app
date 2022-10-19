@@ -19,13 +19,12 @@ function RenderAddPost() {
         await signOut()
         navigate('/')
     }
-
     return (
         <div className="flex flex-col justify-center mx-40">
             <div>
                 <button onClick={handleSignOut}>Sign out</button>
             </div>
-            <form onSubmit={(e: React.FormEvent) => {
+            <form className='flex flex-col justify-center' onSubmit={(e: React.FormEvent) => {
                 e.preventDefault();
                 mutate({ title, description, image, category })
             }
@@ -34,9 +33,9 @@ function RenderAddPost() {
                 <input type='text' name='title' className="border-2"
                     value={title}
                     onChange={e => setPost({ ...post, title: e.target.value })} />
+                <br />
 
                 <label htmlFor='image'>Image</label>
-                <br />
                 <input type='text' name='image' className="border-2"
                     value={image}
                     onChange={e => setPost({ ...post, image: e.target.value })} />
@@ -57,7 +56,7 @@ function RenderAddPost() {
                     <option>health</option>
                 </select>
                 <br />
-                <button className="border-2 border-black rounded-lg bg-emerald-400"> Post </button>
+                {isLoading ? <button className="border-2 border-black rounded-lg bg-emerald-400" disabled> ADDING POST WAIT </button> : <button className="border-2 border-black rounded-lg bg-emerald-400"> Post </button>}
             </form>
         </div >
     );
