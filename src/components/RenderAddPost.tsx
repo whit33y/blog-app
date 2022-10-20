@@ -4,21 +4,19 @@ import { useAuth } from '../context/Auth';
 import { useMutation } from "react-query";
 import { createPost } from "../hooks/useCreatePost";
 
-
-
-
 function RenderAddPost() {
 
     const [post, setPost] = useState({ title: '', description: '', image: '', category: 'it' });
+    const { title, description, image, category } = post;
     const navigate = useNavigate();
     const { signOut } = useAuth();
     const { mutate, isLoading } = useMutation(createPost)
 
-    const { title, description, image, category } = post;
     async function handleSignOut() {
         await signOut()
         navigate('/')
     }
+
     return (
         <div className="flex flex-col justify-center mx-40">
             <div>
@@ -34,7 +32,6 @@ function RenderAddPost() {
                     value={title}
                     onChange={e => setPost({ ...post, title: e.target.value })} />
                 <br />
-
                 <label htmlFor='image'>Image</label>
                 <input type='text' name='image' className="border-2"
                     value={image}

@@ -1,5 +1,5 @@
-import { Boilerplate } from "../layouts/Boilerplate";
-import { RenderPostDetails } from "../components/RenderPostDetails";
+import { Boilerplate } from "../../layouts/Boilerplate";
+import { RenderPostDetails } from "../../components/RenderPostDetails";
 
 function PostDetails() {
     return (

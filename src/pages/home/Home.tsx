@@ -1,5 +1,5 @@
-import { Boilerplate } from "../layouts/Boilerplate";
-import { RenderPostHome } from "../components/RenderPostHome";
+import { Boilerplate } from "../../layouts/Boilerplate";
+import { RenderPostHome } from "../../components/RenderPostHome";
 
 function Home() {
     return (

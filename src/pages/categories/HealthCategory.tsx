@@ -1,5 +1,5 @@
-import { Boilerplate } from "../layouts/Boilerplate";
-import { RenderPostCategory } from "../components/RenderPostCategory";
+import { Boilerplate } from "../../layouts/Boilerplate";
+import { RenderPostCategory } from "../../components/RenderPostCategory";
 
 function HealthCategory() {
     return (

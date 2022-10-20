@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import { Home } from './pages/Home';
-import { About } from './pages/About'
-import { Contact } from './pages/Contact';
-import { ItCategory } from './pages/ItCategory';
-import { TechnologyCategory } from './pages/TechnologyCategory';
-import { LifestyleCategory } from './pages/LifestyleCategory';
-import { HealthCategory } from './pages/HealthCategory';
-import { AddPost } from './pages/AddPost';
-import { PostDetails } from './pages/PostDetails';
+import { Home } from './pages/home/Home';
+import { About } from './pages/home/About'
+import { Contact } from './pages/home/Contact';
+import { ItCategory } from './pages/categories/ItCategory';
+import { TechnologyCategory } from './pages/categories/TechnologyCategory';
+import { LifestyleCategory } from './pages/categories/LifestyleCategory';
+import { HealthCategory } from './pages/categories/HealthCategory';
+import { AddPost } from './pages/post/AddPost';
+import { PostDetails } from './pages/post/PostDetails';
 import { NotFound } from './pages/NotFound';
-import { Login } from './pages/Login';
-import { Signup } from './pages/Signup';
+import { Login } from './pages/auth/Login';
+import { Signup } from './pages/auth/Signup';
 import { AuthProvider } from './context/Auth';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { queryClient } from './utils/queryClient';
