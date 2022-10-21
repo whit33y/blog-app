@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 function Header() {
     const linkStyle = "text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300"
+    const linkStyleHamburger = "hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300"
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
         setIsNavOpen((prev) => !prev);
     }
     return (
         <header>
-            <div className='flex flex-row justify-around border-b-2 border-emerald-500 bg-emerald-300'>
+            <div className='flex flex-row justify-around border-b-2 border-emerald-500 bg-gradient-to-l from-emerald-300 to-emerald-500'>
                 <div>
                     <Link to='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</ Link>
                 </div>
@@ -34,11 +35,11 @@ function Header() {
                             <h1 className="text-lg text-emerald-700">Blog-app</h1>
                         </div>
                         <div className="flex flex-col">
-                            <Link to='/'>Home</ Link>
-                            <Link to='/it'>IT</ Link>
-                            <Link to='/tech'>Tech</ Link>
-                            <Link to='/health'>Health</ Link>
-                            <Link to='/lifestyle'>Lifestyle</ Link>
+                            <Link to='/' className={linkStyleHamburger}>Home</ Link>
+                            <Link to='/it' className={linkStyleHamburger}>IT</ Link>
+                            <Link to='/tech' className={linkStyleHamburger}>Tech</ Link>
+                            <Link to='/health' className={linkStyleHamburger}>Health</ Link>
+                            <Link to='/lifestyle' className={linkStyleHamburger}>Lifestyle</ Link>
                         </div>
                     </div>
                 </div>
