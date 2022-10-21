@@ -1,6 +1,9 @@
+import { link } from "fs";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function Header() {
+    const linkStyle = "text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300"
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
         setIsNavOpen((prev) => !prev);
@@ -14,15 +17,15 @@ function Header() {
                 <div className="hidden md:block">
                     <div className="flex flex-col">
                         <div>
-                            <Link to='/' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Home</ Link>
-                            <Link to='/about' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">About</ Link>
-                            <Link to='/contact' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Contact</ Link>
+                            <Link to='/' className={linkStyle}>Home</ Link>
+                            <Link to='/about' className={linkStyle}>About</ Link>
+                            <Link to='/contact' className={linkStyle}>Contact</ Link>
                         </div>
                         <div>
-                            <Link to='/it' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">IT</ Link>
-                            <Link to='/tech' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Tech</ Link>
-                            <Link to='/health' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Health</ Link>
-                            <Link to='/lifestyle' className="text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300">Lifestyle</ Link>
+                            <Link to='/it' className={linkStyle}>IT</ Link>
+                            <Link to='/tech' className={linkStyle}>Tech</ Link>
+                            <Link to='/health' className={linkStyle}>Health</ Link>
+                            <Link to='/lifestyle' className={linkStyle}>Lifestyle</ Link>
                         </div>
                     </div>
                 </div>
