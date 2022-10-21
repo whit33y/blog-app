@@ -1,12 +1,8 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { BoilerplateType } from "../types/BoilerplateTypes";
 
-type BoilerProps = {
-    name: string
-    children: React.ReactNode
-}
-
-function Boilerplate(props: BoilerProps) {
+function Boilerplate(props: BoilerplateType) {
     return (
         <div className="flex flex-col bg-slate-200 w-screen h-screen">
             <Header />
