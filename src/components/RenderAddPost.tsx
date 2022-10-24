@@ -4,8 +4,8 @@ import { useMutation } from "react-query";
 import { createPost } from "../hooks/useCreatePost";
 import { useForm } from 'react-hook-form'
 import { FormData } from '../types/FormData';
-function RenderAddPost() {
 
+function RenderAddPost() {
     const navigate = useNavigate();
     const { signOut } = useAuth();
     const { mutate, isLoading } = useMutation(createPost)
