@@ -3,14 +3,27 @@ import { useAuth } from '../context/Auth';
 import { useMutation } from "react-query";
 import { createPost } from "../hooks/useCreatePost";
 import { useForm } from 'react-hook-form'
-import { FormData } from '../types/FormData';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
 function RenderAddPost() {
     const navigate = useNavigate();
     const { signOut } = useAuth();
     const { mutate, isLoading } = useMutation(createPost)
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
-    const onSubmit = handleSubmit(data => mutate(data))
+    const schema = yup.object({
+        title: yup.string().required().min(4),
+        image: yup.string().required().min(5),
+        description: yup.string().required().min(50),
+        category: yup.string().required(),
+    }).required();
+    type FormData = {
+        title: string;
+        description: string;
+        image: string;
+        category: string;
+    }
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(schema) })
+    const onSubmit = handleSubmit((data: FormData) => mutate(data))
     async function handleSignOut() {
         await signOut()
         navigate('/')
