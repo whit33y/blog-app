@@ -1,17 +1,21 @@
-import { useState } from "react";
 import { useNavigate } from 'react-router';
 import { useAuth } from '../context/Auth';
 import { useMutation } from "react-query";
 import { createPost } from "../hooks/useCreatePost";
-
+import { useForm } from 'react-hook-form'
+type FormData = {
+    title: string;
+    description: string;
+    image: string;
+    category: string;
+}
 function RenderAddPost() {
 
-    const [post, setPost] = useState({ title: '', description: '', image: '', category: 'it' });
-    const { title, description, image, category } = post;
     const navigate = useNavigate();
     const { signOut } = useAuth();
     const { mutate, isLoading } = useMutation(createPost)
-
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
+    const onSubmit = handleSubmit(data => mutate(data))
     async function handleSignOut() {
         await signOut()
         navigate('/')
@@ -22,31 +26,23 @@ function RenderAddPost() {
             <div>
                 <button onClick={handleSignOut}>Sign out</button>
             </div>
-            <form className='flex flex-col justify-center' onSubmit={(e: React.FormEvent) => {
-                e.preventDefault();
-                mutate({ title, description, image, category })
-            }
-            } >
+            <form className='flex flex-col justify-center' onSubmit={onSubmit} >
                 <label htmlFor='title'>Title</label>
-                <input type='text' name='title' className="border-2"
-                    value={title}
-                    onChange={e => setPost({ ...post, title: e.target.value })} />
+                <input type='text' className="border-2"
+                    {...register('title')} />
                 <br />
                 <label htmlFor='image'>Image</label>
-                <input type='text' name='image' className="border-2"
-                    value={image}
-                    onChange={e => setPost({ ...post, image: e.target.value })} />
+                <input type='text' className="border-2"
+                    {...register('image')} />
                 <br />
                 <label htmlFor='textCont'>Text content</label>
-                <textarea name='textCont' rows={3} className="border-2"
-                    value={description}
-                    onChange={e => setPost({ ...post, description: e.target.value })}
+                <textarea rows={3} className="border-2"
+                    {...register('description')}
                 />
                 <br />
                 <label htmlFor='category'>Category</label>
                 <select className="border-2"
-                    value={category}
-                    onChange={e => setPost({ ...post, category: e.target.value })}>
+                    {...register('category')}>
                     <option>it</option>
                     <option>tech</option>
                     <option>lifestyle</option>
