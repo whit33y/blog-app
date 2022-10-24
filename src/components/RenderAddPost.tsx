@@ -3,12 +3,7 @@ import { useAuth } from '../context/Auth';
 import { useMutation } from "react-query";
 import { createPost } from "../hooks/useCreatePost";
 import { useForm } from 'react-hook-form'
-type FormData = {
-    title: string;
-    description: string;
-    image: string;
-    category: string;
-}
+import { FormData } from '../types/FormData';
 function RenderAddPost() {
 
     const navigate = useNavigate();
