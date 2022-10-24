@@ -10,19 +10,14 @@ function RenderAddPost() {
     const navigate = useNavigate();
     const { signOut } = useAuth();
     const { mutate, isLoading } = useMutation(createPost)
-    const schema = yup.object({
+    const formSchema = yup.object({
         title: yup.string().required().min(4),
-        image: yup.string().required().min(5),
+        image: yup.string().url().required(),
         description: yup.string().required().min(50),
-        category: yup.string().required(),
+        category: yup.string().oneOf(['it', 'tech', 'health', 'lifestyle']).required(),
     }).required();
-    type FormData = {
-        title: string;
-        description: string;
-        image: string;
-        category: string;
-    }
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(schema) })
+    type FormData = yup.InferType<typeof formSchema>;
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(formSchema) })
     const onSubmit = handleSubmit((data: FormData) => mutate(data))
     async function handleSignOut() {
         await signOut()
