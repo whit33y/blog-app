@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useGetPostByCategory } from "../hooks/useGetPostsCategory";
 import { Post } from '../types/PostTypes'
-import { Category } from '../types/CategoryTypes';
 import { useQuery } from 'react-query';
+
+type Category = {
+    category: string
+}
+
 function RenderPostCategory(props: Category) {
     const getPosts = useGetPostByCategory(props.category)
     const query = useQuery(['postsByCategory', props.category], () => getPosts)

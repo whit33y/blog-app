@@ -1,6 +1,10 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { BoilerplateType } from "../types/BoilerplateTypes";
+
+type BoilerplateType = {
+    name: string
+    children: React.ReactNode
+}
 
 function Boilerplate(props: BoilerplateType) {
     return (
