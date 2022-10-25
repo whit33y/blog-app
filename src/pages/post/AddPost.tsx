@@ -7,6 +7,6 @@ function AddPost() {
             <RenderAddPost />
         </ Boilerplate>
     );
-}
+};
 
 export { AddPost };

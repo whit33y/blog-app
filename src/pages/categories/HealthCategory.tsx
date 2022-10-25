@@ -7,6 +7,6 @@ function HealthCategory() {
             <RenderPostCategory category={'health'} />
         </Boilerplate>
     );
-}
+};
 
 export { HealthCategory };

@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
-    const linkStyle = "text-lg mx-2 hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300"
-    const linkStyleHamburger = "hover:underline hover:cursor-pointer hover:text-emerald-500 duration-300"
+    const linkStyle = "text-lg text-sky-900 mx-2 hover:underline hover:cursor-pointer hover:text-sky-700 duration-300";
+    const linkStyleHamburger = "hover:underline hover:cursor-pointer hover:text-sky-700 duration-300";
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     function handleClick() {
         setIsNavOpen((prev) => !prev);
-    }
+    };
     return (
         <header>
-            <div className='flex flex-row justify-around border-b-2 border-emerald-500 bg-gradient-to-l from-emerald-300 to-emerald-500'>
+            <div className='flex flex-row justify-around border-b-2 border-sky-900 bg-gradient-to-l from-sky-300 to-sky-400 text-sky-900'>
                 <div>
                     <Link to='/' className={isNavOpen ? 'hidden md:block lg:text-4xl md:text-2xl sm:text-xl' : 'lg:text-4xl md:text-2xl sm:text-xl'}>Blog-app</ Link>
                 </div>
@@ -32,7 +32,7 @@ function Header() {
                 <div className={isNavOpen ? 'block md:hidden' : 'hidden'}>
                     <div className="flex flex-col">
                         <div>
-                            <h1 className="text-lg text-emerald-700">Blog-app</h1>
+                            <h1 className="text-lg text-sky-900">Blog-app</h1>
                         </div>
                         <div className="flex flex-col">
                             <Link to='/' className={linkStyleHamburger}>Home</ Link>
@@ -59,6 +59,6 @@ function Header() {
         </header>
 
     );
-}
+};
 
 export { Header };

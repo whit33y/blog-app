@@ -7,6 +7,6 @@ function Home() {
             <RenderPostHome />
         </Boilerplate>
     );
-}
+};
 
 export { Home };

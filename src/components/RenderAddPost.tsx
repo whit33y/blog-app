@@ -20,13 +20,13 @@ function RenderAddPost() {
 
     type FormData = yup.InferType<typeof formSchema>;
 
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(formSchema) })
-    const onSubmit = handleSubmit((data: FormData) => mutate(data))
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({ resolver: yupResolver(formSchema) });
+    const onSubmit = handleSubmit((data: FormData) => mutate(data));
 
     async function handleSignOut() {
         await signOut()
         navigate('/')
-    }
+    };
 
     return (
         <div className="flex flex-col justify-center mx-40">
