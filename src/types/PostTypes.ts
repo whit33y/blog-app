@@ -4,4 +4,4 @@ export interface Post {
     category: string;
     image: string;
     description: string;
-}
+};

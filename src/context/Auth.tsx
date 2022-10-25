@@ -22,7 +22,7 @@ interface ContextValue {
     signIn: (data: UserCredentials) => Promise<AuthPromises>;
     signOut: () => Promise<{ error: ApiError | null }>;
     user: User | null;
-}
+};
 function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
@@ -48,20 +48,20 @@ function AuthProvider({ children }: AuthProviderProps) {
         signIn: (data: UserCredentials) => supabase.auth.signIn(data),
         signOut: () => supabase.auth.signOut(),
         user,
-    }
+    };
 
     return (
         <AuthContext.Provider value={value}>
             {!loading && children}
         </AuthContext.Provider>
-    )
+    );
 
-}
+};
 function useAuth() {
     const context = useContext(AuthContext);
     if (context === null) {
         throw new Error('error');
     }
     return context;
-}
+};
 export { AuthProvider, useAuth };

@@ -17,9 +17,9 @@ function Signup() {
         const password = passwordRef.current?.value;
         const { error } = await signUp({ email, password });
         if (error) {
-            alert('error signing in')
+            alert('error signing in');
         } else {
-            navigate('/')
+            navigate('/');
         }
     }
 
@@ -36,5 +36,5 @@ function Signup() {
             </form>
         </>
     );
-}
+};
 export { Signup };

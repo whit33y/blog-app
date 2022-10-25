@@ -7,6 +7,6 @@ function TechnologyCategory() {
             <RenderPostCategory category={'tech'} />
         </Boilerplate>
     );
-}
+};
 
 export { TechnologyCategory };

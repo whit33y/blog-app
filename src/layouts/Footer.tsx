@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 function Footer() {
-    const buttonStyle = "border-2 border-black px-2 bg-emerald-500 hover:text-emerald-500 hover:bg-black duration-300 sm:mb-0 sm:ml-0 md:ml-2"
+    const buttonStyle = "text-sky-900 border-2 border-sky-900 px-2 bg-sky-500 hover:text-sky-500 hover:bg-sky-900 duration-300 sm:mb-0 sm:ml-0 md:ml-2";
     return (
-        <footer className="flex justify-between items-end h-12 mt-auto border-t-2 border-emerald-500 bg-gradient-to-r from-emerald-300 to-emerald-500">
+        <footer className="flex justify-between items-end h-12 mt-auto border-t-2 border-sky-900 bg-gradient-to-r from-sky-300 to-sky-400">
             <div className='mb-2 ml-2 my-2'>
                 <button className={buttonStyle}><Link to='/contact'>Contact</Link></button>
                 <button className={buttonStyle}><Link to='/about'>About</Link></button>
@@ -14,6 +14,6 @@ function Footer() {
             </div>
         </footer>
     );
-}
+};
 
 export { Footer };

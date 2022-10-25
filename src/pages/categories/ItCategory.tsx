@@ -7,6 +7,6 @@ function ItCategory() {
             <RenderPostCategory category={'it'} />
         </Boilerplate>
     );
-}
+};
 
 export { ItCategory };

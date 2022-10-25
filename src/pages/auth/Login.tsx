@@ -13,9 +13,9 @@ function Login() {
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        const email = emailRef.current?.value
-        const password = passwordRef.current?.value
-        const { error } = await signIn({ email, password })
+        const email = emailRef.current?.value;
+        const password = passwordRef.current?.value;
+        const { error } = await signIn({ email, password });
         if (error) {
             alert('error signing in')
         } else {
@@ -38,5 +38,5 @@ function Login() {
             </form>
         </>
     );
-}
+};
 export { Login };

@@ -7,6 +7,6 @@ function LifestyleCategory() {
             <RenderPostCategory category={'lifestyle'} />
         </Boilerplate>
     );
-}
+};
 
 export { LifestyleCategory };

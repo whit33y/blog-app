@@ -1,5 +1,5 @@
 import { supabase } from "../client";
-import { Post } from '../types/PostTypes'
+import { Post } from '../types/PostTypes';
 
 async function useGetPostDetails(id: string | undefined) {
     if (!id) return
@@ -8,8 +8,8 @@ async function useGetPostDetails(id: string | undefined) {
             .from<Post>('posts')
             .select()
             .eq('id', id).single()
-        return data
+        return data;
     }
-}
+};
 
 export { useGetPostDetails };

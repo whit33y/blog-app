@@ -41,6 +41,6 @@ function App() {
       </Router>
     </QueryClientProvider>
   );
-}
+};
 
 export { App };
