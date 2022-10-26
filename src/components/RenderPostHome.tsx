@@ -13,7 +13,7 @@ function RenderPostHome() {
           <p className="text-2xl">Error! </p>
         ) : query.data ? (
           query.data.map((postData: Post) => (
-            <div className="flex flex-row border-b-2 bg-gray-100 ">
+            <div className="flex flex-row border-b-2 bg-gray-100 " key={postData.id}>
               <img
                 className="h-40 w-60 sm:h-48 sm:w-72  sm:ml-0 md:ml-20  mr-5 border-2 border-sky-900 mb-4"
                 src={postData.image}
