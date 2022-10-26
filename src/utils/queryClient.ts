@@ -1,4 +1,4 @@
-import { QueryClient } from 'react-query';
+import { QueryClient } from 'react-query'
 
-const queryClient = new QueryClient({});
-export { queryClient };
+const queryClient = new QueryClient({})
+export { queryClient }
