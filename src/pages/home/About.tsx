@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Boilerplate } from '../../layouts/Boilerplate';
 function About() {
   const imgStyle = 'w-10 h-10 p-2 bg-sky-500 rounded-3xl';
