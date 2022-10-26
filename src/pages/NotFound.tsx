@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Boilerplate } from '../layouts/Boilerplate';
 
 function NotFound() {
