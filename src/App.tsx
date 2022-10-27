@@ -25,10 +25,7 @@ function App() {
             <Route path='/*' element={<NotFound />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/it' element={<RenderPostCategory category='it' />} />
-            <Route path='/tech' element={<RenderPostCategory category='tech' />} />
-            <Route path='/lifestyle' element={<RenderPostCategory category='lifestyle' />} />
-            <Route path='/health' element={<RenderPostCategory category='health' />} />
+            <Route path='/category/:category' element={<RenderPostCategory />} />
             <Route path='/accesstools' element={<Login />} />
             <Route
               path='/signup'

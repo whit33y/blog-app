@@ -1,18 +1,15 @@
-import { Link } from 'react-router-dom'
-import { useGetPostByCategory } from '../hooks/useGetPostsCategory'
+import { Link, useParams } from 'react-router-dom'
+import { useGetPostByCategory } from '../hooks/useGetPostsByCategory'
 import { Post } from '../types/PostTypes'
 import { useQuery } from 'react-query'
 import { Boilerplate } from '../layouts/Boilerplate'
 
-type Category = {
-  category: string
-}
-
-function RenderPostCategory(props: Category) {
-  const getPosts = useGetPostByCategory(props.category)
-  const query = useQuery(['postsByCategory', props.category], () => getPosts)
+function RenderPostCategory() {
+  const { category } = useParams()
+  const getPosts = useGetPostByCategory(category!)
+  const query = useQuery(['postsByCategory', category], () => getPosts)
   return (
-    <Boilerplate name={props.category}>
+    <Boilerplate name={category!}>
       <div className='flex flex-row'>
         <div>
           {query.isLoading ? (
