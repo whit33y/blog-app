@@ -6,16 +6,18 @@ import { Boilerplate } from '../layouts/Boilerplate'
 
 function RenderPostCategory() {
   const { category } = useParams()
-  const getPosts = useGetPostByCategory(category!)
+  const getPosts = useGetPostByCategory(category)
   const query = useQuery(['postsByCategory', category], () => getPosts)
   return (
-    <Boilerplate name={category!}>
+    <Boilerplate name={category}>
       <div className='flex flex-row'>
         <div>
           {query.isLoading ? (
             <p className='text-2xl'>Loading ...</p>
           ) : query.isError ? (
             <p className='text-2xl'>Error! </p>
+          ) : query.data?.length == 0 ? (
+            <p className='text-2xl'>Category not found! </p>
           ) : query.data ? (
             query.data.map((postData: Post) => (
               <div className='flex flex-row border-b-2 bg-gray-100' key={postData.id}>
