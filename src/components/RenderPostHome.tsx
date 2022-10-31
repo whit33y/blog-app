@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom'
 import { Post } from '../types/PostTypes'
-import { useQuery } from 'react-query'
 import { useGetAllPosts } from '../hooks/useGetAllPosts'
 function RenderPostHome() {
-  const { isLoading, isError, data } = useQuery(['posts'], useGetAllPosts)
+  const posts = useGetAllPosts()
   return (
     <div className='flex flex-row'>
       <div>
-        {isLoading ? (
+        {posts?.isLoading ? (
           <p className='text-2xl'>Loading ...</p>
-        ) : isError ? (
+        ) : posts?.isError ? (
           <p className='text-2xl'>Error! </p>
-        ) : data ? (
-          data.map((postData: Post) => (
+        ) : posts?.data ? (
+          posts?.data.map((postData: Post) => (
             <div className='flex flex-row border-b-2 bg-gray-100 ' key={postData.id}>
               <img
                 className='h-40 w-60 sm:h-48 sm:w-72  sm:ml-0 md:ml-20  mr-5 border-2 border-sky-900 mb-4'
