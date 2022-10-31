@@ -1,26 +1,23 @@
-import { Link } from 'react-router-dom'
-import { useGetPostByCategory } from '../hooks/useGetPostsCategory'
+import { Link, useParams } from 'react-router-dom'
+import { useGetPostByCategory } from '../hooks/useGetPostsByCategory'
 import { Post } from '../types/PostTypes'
-import { useQuery } from 'react-query'
 import { Boilerplate } from '../layouts/Boilerplate'
 
-type Category = {
-  category: string
-}
-
-function RenderPostCategory(props: Category) {
-  const getPosts = useGetPostByCategory(props.category)
-  const query = useQuery(['postsByCategory', props.category], () => getPosts)
+function RenderPostCategory() {
+  const { category } = useParams()
+  const posts = useGetPostByCategory(category)
   return (
-    <Boilerplate name={props.category}>
+    <Boilerplate name={category}>
       <div className='flex flex-row'>
         <div>
-          {query.isLoading ? (
+          {posts?.isLoading ? (
             <p className='text-2xl'>Loading ...</p>
-          ) : query.isError ? (
+          ) : posts?.isError ? (
             <p className='text-2xl'>Error! </p>
-          ) : query.data ? (
-            query.data.map((postData: Post) => (
+          ) : posts?.data?.length == 0 ? (
+            <p className='text-2xl'>Category not found! </p>
+          ) : posts?.data ? (
+            posts.data.map((postData: Post) => (
               <div className='flex flex-row border-b-2 bg-gray-100' key={postData.id}>
                 <img
                   className='h-40 w-60 sm:h-48 sm:w-72 sm:ml-0 md:ml-20 mr-5 border-2 border-sky-900 mb-4'

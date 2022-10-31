@@ -2,7 +2,7 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 
 type BoilerplateType = {
-  name: string
+  name: string | undefined
   children: React.ReactNode
 }
 
